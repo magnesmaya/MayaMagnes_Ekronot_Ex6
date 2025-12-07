@@ -30,10 +30,18 @@ double Quadrilateral::CalArea()
 }
 
 void Quadrilateral::setHeight(int h) {
+	if (h < 0)
+	{
+		throw ShapeException();
+	}
 	height = h;
+
 }
 void Quadrilateral::setWidth(int w) {
-
+	if (w < 0)
+	{
+		throw ShapeException();
+	}
 	width = w;
 }
 double Quadrilateral::CalPerimater() {
